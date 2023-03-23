@@ -7,10 +7,10 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>My CD Collection:</h2>
+    <h2>My Weapon Collection:</h2>
 
     <button type="button" onclick="loadXMLDoc()">
-    Get my CD collection</button>
+    Get my weapon collections</button>
     
     <table id="demo" border="1" cellspacing="0" cellpadding="10" width="80%" align="center"">
     </table>
@@ -23,7 +23,7 @@
                     createTable(this);
                 }
             };
-            xmlhttp.open("GET", "cd_catalog.xml", true);
+            xmlhttp.open("GET", "weapons.xml", true);
             xmlhttp.send();
         }
         
@@ -35,31 +35,35 @@
 
             txt = `
                 <tr>
-                    <th>TITLE</th>
-                    <th>ARTIST</th>
-                    <th>COUNTRY</th>
-                    <th>COMPANY</th>
-                    <th>PRICE</th>
-                    <th>YEAR</th>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Manufacturer</th>
+                    <th>Users</th>
                 </tr>
             `;
 
-            var title = xmlDoc.getElementsByTagName("TITLE");
-            var artist = xmlDoc.getElementsByTagName("ARTIST");
-            var country = xmlDoc.getElementsByTagName("COUNTRY");
-            var company = xmlDoc.getElementsByTagName("COMPANY");
-            var price = xmlDoc.getElementsByTagName("PRICE");
-            var year = xmlDoc.getElementsByTagName("YEAR");
+            var name = xmlDoc.getElementsByTagName("name");
+            var type = xmlDoc.getElementsByTagName("type");
+            var manufacturer = xmlDoc.getElementsByTagName("manufacturer");
+            var users = xmlDoc.getElementsByTagName("users");
 
-            for (i = 0; i< title.length; i++) {
+            for (i = 0; i< name.length; i++) {
                 txt += `
                     <tr>
-                        <td>${title[i].childNodes[0].nodeValue}</td>
-                        <td>${artist[i].childNodes[0].nodeValue}</td>
-                        <td>${country[i].childNodes[0].nodeValue}</td>
-                        <td>${company[i].childNodes[0].nodeValue}</td>
-                        <td>${price[i].childNodes[0].nodeValue}</td>
-                        <td>${year[i].childNodes[0].nodeValue}</td>
+                        <td>${name[i].childNodes[0].nodeValue}</td>
+                        <td>${type[i].childNodes[0].nodeValue}</td>
+                        <td>${manufacturer[i].childNodes[0].nodeValue}</td>
+                        <td>
+                            <ul>`;
+                                var list = "";
+                                for(j = 0; j < users.length-1;j++){
+                                    list += `<li>${users[i].children[j].childNodes[0].nodeValue}</li>`;
+                                }
+
+                txt +=`
+                                ${list}
+                            </ul>
+                        </td>
                     </tr>
                 `;                
             }

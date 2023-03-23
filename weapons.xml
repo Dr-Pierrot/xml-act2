@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<weapons>
+    <weapon>
+        <name>AK47</name>
+        <type>Assault Rifle</type>
+        <manufacturer>Kalashnikov Concern</manufacturer>
+        <users>
+            <country>Afghanistan</country>
+            <country>Albania</country>
+            <country>Algeria</country>
+            <country>Angola</country>
+        </users>
+    </weapon>
+    <weapon>
+        <name>M16</name>
+        <type>Assault Rifle</type>
+        <manufacturer>Colt's Manufacturing Company</manufacturer>
+        <users>
+            <country>Ecuador</country>
+            <country>Japan</country>
+            <country>Philippines</country>
+            <country>United States</country>
+        </users>
+    </weapon>
+    <weapon>
+        <name>Glock 17</name>
+        <type>Semi-Automatic Pistol</type>
+        <manufacturer>Glock Ges.m.b.H.</manufacturer>
+        <users>
+            <country>Canada</country>
+            <country>China</country>
+            <country>Ecuador</country>
+            <country>France</country>
+        </users>
+    </weapon>
+    <weapon>
+        <name>M40</name>
+        <type>Sniper Rifle</type>
+        <manufacturer>Remington Arms</manufacturer>
+        <users>
+            <country>United States</country>
+            <country>Afghanistan</country>
+            <country>Malaysia</country>
+            <country>Philippines</country>
+        </users>
+    </weapon>
+    <weapon>
+        <name>AT4</name>
+        <type>Anti-Tank Launcher</type>
+        <manufacturer>Saab Bofors Dynamics</manufacturer>
+        <users>
+            <country>United States</country>
+            <country>Sweden</country>
+            <country>Germany</country>
+            <country>Norway</country>
+        </users>
+    </weapon>
+
+
+</weapons>
